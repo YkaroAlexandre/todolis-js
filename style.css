@@ -1,0 +1,61 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #e4ffd4;
+}
+
+.div_input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0fbe9;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.div_input input {
+  background-color: transparent;
+  border-style: none;
+}
+.div_input input:focus {
+  outline: 0;
+}
+
+i {
+  margin-left: 5px;
+  cursor: pointer;
+  color: #6e8f85;
+}
+
+.div_task {
+  background-color: #f0fbe9;
+  width: 75%;
+  height: 70vh;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.marker {
+  width: 15px;
+  height: 15px;
+  background-color: #edc68e;
+  border-radius: 50%;
+}
+
+.icons_container {
+  display: flex;
+  justify-content: space-around;
+}

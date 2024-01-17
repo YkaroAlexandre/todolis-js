@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>ToDoList</title>
+  </head>
+  <body>
+    <script src="./script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/52d98fe718.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="container">
+      <h1>To do List</h1>
+      <div class="div_input">
+        <input type="text" name="tarefa" id="nome_tarefa" />
+        <i class="fa-solid fa-plus" onclick="adicionarTarefa()"></i>
+      </div>
+      <div class="div_task">
+        <ul id="list_task"></ul>
+      </div>
+    </div>
+  </body>
+</html>
