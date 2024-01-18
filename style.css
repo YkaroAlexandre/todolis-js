@@ -49,6 +49,7 @@ i {
   border: 1px solid;
   border-radius: 5px;
   margin-top: 5px;
+  overflow: auto;
 }
 
 .marker {
