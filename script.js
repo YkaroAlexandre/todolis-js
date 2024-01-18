@@ -1,45 +1,53 @@
 function adicionarTarefa() {
   const textInput = window.document.getElementById("nome_tarefa");
-  console.log("pt1");
 
-  const taskList = document.getElementById("list_task");
-  console.log("pt2");
+  if (textInput.value == "" || textInput.value === null) {
+    alert("Digite uma tarefa");
+  } else {
+    
 
-  const newTask = document.createElement("li");
-  console.log("pt3");
+    const taskList = document.getElementById("list_task");
+    
 
-  const marker = document.createElement("div");
-  marker.classList.add("marker");
-  newTask.appendChild(marker);
-  console.log("pt4");
+    const newTask = document.createElement("li");
+    
 
-  const taskText = document.createElement("span");
-  taskText.textContent = textInput.value;
-  newTask.appendChild(taskText);
-  console.log("pt5");
+    const marker = document.createElement("div");
+    marker.classList.add("marker");
+    newTask.appendChild(marker);
+    
 
-  const iconTrash = document.createElement("i");
-  iconTrash.classList.add("fa-regular");
-  iconTrash.classList.add("fa-trash-can");
-  console.log("pt6");
+    const taskText = document.createElement("span");
+    taskText.textContent = textInput.value;
+    newTask.appendChild(taskText);
+    
 
-  const iconCheck = document.createElement("i");
-  iconCheck.classList.add("fa-solid");
-  iconCheck.classList.add("fa-check");
-  console.log("pt7");
+    const iconTrash = document.createElement("i");
+    iconTrash.classList.add("fa-regular");
+    iconTrash.classList.add("fa-trash-can");
+    
+    iconTrash.onclick = () => newTask.remove();
 
-  const iconsContainer = document.createElement("div");
-  iconsContainer.classList.add("icons_container");
-  iconsContainer.appendChild(iconCheck);
-  iconsContainer.appendChild(iconTrash);
-  console.log("pt8");
+    const iconCheck = document.createElement("i");
+    iconCheck.classList.add("fa-solid");
+    iconCheck.classList.add("fa-check");
+    
 
-  newTask.appendChild(iconsContainer);
-  console.log("pt9");
+    const textLined = false
+    iconCheck.onclick = ()=>{
+      taskText.style.textDecoration = "line-through"
+    }
 
-  taskList.appendChild(newTask);
-  console.log("pt10");
+    const iconsContainer = document.createElement("div");
+    iconsContainer.classList.add("icons_container");
+    iconsContainer.appendChild(iconCheck);
+    iconsContainer.appendChild(iconTrash);
+    
 
-  taskText.value = "";
-  console.log("pt11");
+    newTask.appendChild(iconsContainer);
+
+    taskList.appendChild(newTask);
+
+  }
+
 }
